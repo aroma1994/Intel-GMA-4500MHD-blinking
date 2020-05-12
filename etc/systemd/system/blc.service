@@ -1,0 +1,10 @@
+[Unit]
+Description=BLC_PWM
+After=hibernate.target hybrid-sleep.target suspend.target sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /usr/bin/blc.sh
+
+[Install]
+WantedBy=multi-user.target sleep.target suspend.target hibernate.target hybrid-sleep.target
