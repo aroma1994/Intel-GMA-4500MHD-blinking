@@ -12,8 +12,11 @@ $ systemctl enable blc.service
 ### Add acpi_backlight=none to /etc/default/grub:
 
 $ cat /etc/default/grub:
+
 ...
+
 GRUB_CMDLINE_LINUX="acpi_backlight=none"
+
 ...
 
 $ grub-mkconfig -o /boot/grub/grub.cfg
@@ -21,6 +24,7 @@ $ grub-mkconfig -o /boot/grub/grub.cfg
 ### Enable i915 in mkinitcpio.d modules:
 
 $ cat /etc/mkinitcpio.d/
+
 MODULES=(i915)
 
 $ mkinitcpio -p linux
@@ -28,5 +32,7 @@ $ mkinitcpio -p linux
 ### Set xset in ~/.xprofile:
 
 $ cat ~/.xprofile:
+
 xset -dpms
+
 xset s off
