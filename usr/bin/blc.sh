@@ -1,0 +1,1 @@
+intel_reg write BLC_PWM_CTL 0x15C22b84
